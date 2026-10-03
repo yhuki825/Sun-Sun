@@ -1,0 +1,407 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8">
+<!--
+================================================================
+  さんさん ブランドサイト デザイン案
+  ---------------------------------------------------------------
+  ■ 確認事項一覧（公開前にご確認ください）
+    【確認事項】キャッチコピー「会員さまの毎日に、さんさんと届く通販を。」は仮案です
+    【確認事項】社名「さんさん」を「燦々（さんさん）と降りそそぐ光」に重ねた表現はデザイン上の解釈です（由来とは断定していません）
+    【確認事項】ロゴは日本語表記「さんさん」＋太陽の記号の仮デザインです（英字表記はCSVに無いため使っていません）
+    【確認事項】「私たちについて」「大切にしていること」「進め方」の文章はCSVの事業内容（会員制通販事業・通販物販コンサルティング）を膨らませた仮文です
+    【確認事項】会員制通販で扱う商品ジャンル・会員の仕組み（会費の有無など）はCSVに無いため具体的に書いていません
+    【確認事項】法人格の有無（個人事業／株式会社など）。CSVの商号どおり「さんさん」と表記しています
+    【確認事項】通販を行う場合は特定商取引法に基づく表記・プライバシーポリシーのページが別途必要です
+    【確認事項】画像はUnsplashのフリー素材（仮）。photo-1740842028123-56fd319de33a / photo-1595246135406-803418233494 / photo-1556742049-0cfed4f6a45d / photo-1460925895917-afdab827c52f
+    【確認事項】og:image / og:url / favicon は公開ドメイン確定後に設定してください
+  ■ デザイン方針：やわらかな日だまり色（オレンジ）× 丸ゴシック。左右分割のファーストビュー。
+  ■ 書体：M PLUS Rounded 1c（和文）＋ Poppins（欧文）
+================================================================
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>さんさん｜会員制通販事業・通販物販コンサルティング</title>
+<meta name="description" content="さんさんは、会員制の通販事業と、通販・物販に取り組む事業者さまへのコンサルティングを行っています。">
+<meta name="theme-color" content="#EE7B2C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="さんさん｜会員制通販事業・通販物販コンサルティング">
+<meta property="og:description" content="会員制の通販事業と、通販・物販のコンサルティング。">
+<meta property="og:locale" content="ja_JP">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sun:#EE7B2C;      /* 日だまりのオレンジ：メイン */
+  --sun-soft:#FBD9BC;
+  --sun-pale:#FFF1E2;
+  --cream:#FFF8EF;
+  --ink:#3A2A1E;
+  --ink-2:#6E5A4B;
+  --line:rgba(58,42,30,.14);
+  --jp:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;
+  --en:"Poppins","M PLUS Rounded 1c",sans-serif;
+  --wrap:1160px;
+  --gut:clamp(16px,5vw,48px);
+  --hh:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh)}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--jp);font-size:16px;line-height:1.95;letter-spacing:.04em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+p,li,dd{word-break:auto-phrase;text-wrap:pretty}
+.nw{display:inline-block}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gut)}
+.skip{position:fixed;left:16px;top:-60px;z-index:300;background:var(--ink);color:#fff;padding:8px 14px;border-radius:8px;text-decoration:none}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+
+/* header */
+.hd{position:fixed;inset:0 0 auto;z-index:100;height:var(--hh);transition:background .3s,box-shadow .3s}
+.hd.is-scrolled{background:rgba(255,248,239,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.hd__in{height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:22px;letter-spacing:.12em}
+.logo svg{width:34px;height:34px}
+.nav ul{display:flex;gap:30px}
+.nav a{text-decoration:none;font-size:14px;font-weight:500;padding:6px 2px;border-bottom:2px solid transparent;transition:border-color .25s}
+.nav a:hover{border-color:var(--sun)}
+.menu{display:none;width:44px;height:44px;border:0;background:var(--sun);border-radius:50%;cursor:pointer;position:relative}
+.menu span{position:absolute;left:13px;width:18px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s}
+.menu span:nth-child(1){top:15px}.menu span:nth-child(2){top:21px}.menu span:nth-child(3){top:27px}
+.menu[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+/* hero: split */
+.hero{min-height:100vh;min-height:100svh;padding:calc(var(--hh) + 32px) 0 64px;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:62vmax;height:62vmax;border-radius:50%;right:-18vmax;top:-22vmax;background:radial-gradient(circle,var(--sun-soft) 0,rgba(251,217,188,0) 68%);z-index:0}
+.hero__grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
+.hero__tag{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;color:var(--sun);background:#fff;border-radius:999px;padding:6px 16px;box-shadow:0 2px 0 var(--sun-soft);margin-bottom:28px}
+.hero__tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sun)}
+.hero h1{font-weight:800;font-size:clamp(30px,3.9vw,52px);line-height:1.45;letter-spacing:.06em}
+.hero h1 em{font-style:normal;color:var(--sun)}
+.hero__lead{margin-top:28px;color:var(--ink-2);max-width:30em}
+.hero__biz{margin-top:36px;display:flex;flex-wrap:wrap;gap:10px}
+.hero__biz li{font-size:14px;font-weight:700;padding:10px 18px;border-radius:14px;background:var(--sun);color:#fff}
+.hero__biz li:nth-child(2){background:#fff;color:var(--sun);border:2px solid var(--sun)}
+.hero__photo{position:relative}
+.hero__photo .arch{aspect-ratio:4/5;border-radius:999px 999px 28px 28px;overflow:hidden;background:var(--sun-soft);box-shadow:0 30px 60px -30px rgba(238,123,44,.55)}
+.hero__photo img{width:100%;height:100%;object-fit:cover}
+.hero__ray{position:absolute;left:-28px;bottom:36px;width:112px;height:112px}
+.hero__en{position:absolute;right:-34px;top:24px;writing-mode:vertical-rl;font-family:var(--en);font-size:12px;letter-spacing:.3em;color:var(--ink-2)}
+
+/* section base */
+.sec{padding:clamp(88px,12vw,140px) 0}
+.sec__label{font-family:var(--en);font-weight:600;font-size:13px;letter-spacing:.24em;color:var(--sun);text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.sec__label::before{content:"";width:22px;height:22px;border-radius:50%;background:radial-gradient(circle,var(--sun) 0 40%,transparent 42%),repeating-conic-gradient(var(--sun) 0 8deg,transparent 8deg 30deg);opacity:.9}
+.sec__title{margin-top:14px;font-weight:800;font-size:clamp(26px,3.2vw,38px);line-height:1.5;letter-spacing:.06em}
+
+/* about */
+.about{background:#fff;border-radius:48px 48px 0 0}
+.about__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,90px);align-items:start}
+.about__body p{color:var(--ink-2)}
+.about__body p+p{margin-top:1.3em}
+.about__big{font-weight:800;font-size:clamp(22px,2.4vw,28px);line-height:1.7;color:var(--ink);margin-bottom:28px}
+
+/* business */
+.biz{background:var(--sun-pale)}
+.biz__list{margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,36px)}
+.card{background:#fff;border-radius:32px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 0 var(--sun-soft)}
+.card figure{aspect-ratio:16/10;overflow:hidden;background:var(--sun-soft)}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.card:hover img{transform:scale(1.04)}
+.card__body{padding:clamp(24px,3vw,40px)}
+.card__no{font-family:var(--en);font-weight:600;color:var(--sun);font-size:14px;letter-spacing:.14em}
+.card h3{font-size:clamp(21px,2.2vw,26px);font-weight:800;margin:6px 0 14px;line-height:1.5}
+.card p{color:var(--ink-2);font-size:15px}
+.chips{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{font-size:13px;padding:4px 12px;border-radius:999px;background:var(--sun-pale);color:var(--ink)}
+
+/* values */
+.values__list{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,28px)}
+.value{padding:36px 28px 32px;border-radius:28px;border:2px solid var(--sun-soft);background:#fff;position:relative}
+.value__icon{width:56px;height:56px;border-radius:50%;background:var(--sun);display:grid;place-items:center;margin-bottom:22px}
+.value__icon svg{width:28px;height:28px}
+.value h3{font-size:19px;font-weight:800;margin-bottom:10px;line-height:1.55}
+.value p{font-size:15px;color:var(--ink-2)}
+
+/* flow */
+.flow{background:var(--ink);color:#fff;border-radius:48px}
+.flow .sec__title{color:#fff}
+.flow__intro{margin-top:18px;color:rgba(255,255,255,.75);max-width:34em}
+.steps{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+.step{position:relative;padding:28px 22px;border-radius:24px;background:rgba(255,255,255,.06)}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-family:var(--en);font-weight:600;font-size:30px;color:var(--sun);display:block;line-height:1;margin-bottom:16px}
+.step h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.step p{font-size:14px;color:rgba(255,255,255,.72);line-height:1.85}
+.flow__wrap{margin:0 var(--gut)}
+
+/* band */
+.band{padding:clamp(72px,10vw,120px) 0 0}
+.band__in{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(20px,3vw,32px);align-items:end}
+.band figure{border-radius:32px;overflow:hidden;aspect-ratio:16/10;background:var(--sun-soft)}
+.band img{width:100%;height:100%;object-fit:cover}
+.band__note{font-weight:800;font-size:clamp(20px,2.4vw,28px);line-height:1.7}
+.band__note small{display:block;font-weight:500;font-size:15px;color:var(--ink-2);margin-top:14px}
+
+/* company */
+.co__grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,90px)}
+.outline{border-top:2px solid var(--ink)}
+.outline div{display:grid;grid-template-columns:8em 1fr;gap:16px;padding:22px 4px;border-bottom:1px solid var(--line)}
+.outline dt{font-weight:700;font-size:14px;color:var(--sun)}
+.outline dd{font-size:16px}
+
+/* footer */
+.ft{background:var(--sun);color:#fff;padding:56px 0 36px;border-radius:48px 48px 0 0}
+.ft__in{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:28px}
+.ft .logo{color:#fff}
+.ft nav ul{display:flex;flex-wrap:wrap;gap:22px}
+.ft nav a{text-decoration:none;font-size:14px;opacity:.9}
+.ft nav a:hover{opacity:1;text-decoration:underline}
+.copy{margin-top:36px;font-family:var(--en);font-size:12px;letter-spacing:.08em;opacity:.9}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.js .reveal.is-in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .hero__grid,.about__grid,.biz__list,.co__grid,.band__in{grid-template-columns:1fr}
+  .hero__photo{max-width:420px;margin:0 auto;width:100%}
+  .values__list{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  :root{--hh:64px}
+  .menu{display:block}
+  .nav{position:fixed;inset:var(--hh) 0 auto;background:var(--cream);padding:16px var(--gut) 28px;box-shadow:0 12px 24px -12px rgba(58,42,30,.25);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
+  .nav.is-open{opacity:1;visibility:visible;transform:none}
+  .nav ul{flex-direction:column;gap:0}
+  .nav a{display:block;padding:14px 0;font-size:16px;border-bottom:1px solid var(--line)}
+  .hero__en{display:none}
+  .hero__ray{width:80px;height:80px;left:-8px}
+  .outline div{grid-template-columns:1fr;gap:2px}
+}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="hd" id="hd">
+  <div class="wrap hd__in">
+    <!-- 【確認事項】ロゴは仮デザイン（太陽の記号＋日本語表記） -->
+    <a class="logo" href="#top" aria-label="さんさん トップへ">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="7" fill="#EE7B2C"/><g stroke="#EE7B2C" stroke-width="2.4" stroke-linecap="round"><path d="M17 2v4M17 28v4M2 17h4M28 17h4M6.4 6.4l2.8 2.8M24.8 24.8l2.8 2.8M6.4 27.6l2.8-2.8M24.8 9.2l2.8-2.8"/></g></svg>
+      さんさん
+    </a>
+    <button class="menu" id="menu" aria-controls="nav" aria-expanded="false" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="ページ内ナビゲーション">
+      <ul>
+        <li><a href="#about">私たちについて</a></li>
+        <li><a href="#business">事業内容</a></li>
+        <li><a href="#values">大切にしていること</a></li>
+        <li><a href="#flow">進め方</a></li>
+        <li><a href="#company">会社概要</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="heroTitle">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="hero__tag">会員制通販 ／ 通販・物販コンサルティング</p>
+        <!-- 【確認事項】キャッチコピーは仮案 -->
+        <h1 id="heroTitle"><span class="nw">会員さまの毎日に、</span><br><span class="nw"><em>さんさん</em>と届く</span><br>通販を。</h1>
+        <!-- 【確認事項】リード文はCSVの事業内容を膨らませた仮文 -->
+        <p class="hero__lead">さんさんは、会員制の通販事業を営みながら、そこで積み重ねた経験をもとに、通販・物販に取り組む事業者さまのご相談にのっています。</p>
+        <ul class="hero__biz" aria-label="事業の柱">
+          <li>会員制通販事業</li>
+          <li>通販物販コンサルティング</li>
+        </ul>
+      </div>
+      <div class="hero__photo">
+        <figure class="arch">
+          <!-- photo-1740842028123-56fd319de33a（Unsplash） -->
+          <img src="https://images.unsplash.com/photo-1740842028123-56fd319de33a?auto=format&fit=crop&w=1920&q=80" alt="日差しを受けて床に置かれたクラフトの配送箱" width="960" height="1200">
+        </figure>
+        <svg class="hero__ray" viewBox="0 0 112 112" aria-hidden="true"><circle cx="56" cy="56" r="22" fill="#EE7B2C"/><g stroke="#EE7B2C" stroke-width="4" stroke-linecap="round"><path d="M56 6v14M56 92v14M6 56h14M92 56h14M20.6 20.6l9.9 9.9M81.5 81.5l9.9 9.9M20.6 91.4l9.9-9.9M81.5 30.5l9.9-9.9"/></g></svg>
+        <p class="hero__en" aria-hidden="true">MEMBERSHIP MAIL ORDER</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec about" id="about" aria-labelledby="aboutTitle">
+    <div class="wrap about__grid">
+      <div class="reveal">
+        <p class="sec__label">About</p>
+        <h2 class="sec__title" id="aboutTitle">私たちについて</h2>
+      </div>
+      <!-- 【確認事項】理念文は仮文。社名の「燦々」はデザイン上の解釈 -->
+      <div class="about__body reveal">
+        <p class="about__big">箱を開けたときの、ぱっと明るくなる気持ち。<br>その瞬間を、何度でも届けたい。</p>
+        <p>通販は、画面の向こうの誰かと、箱ひとつでつながる商いです。届く日を楽しみに待ってくださる会員さまがいるから、私たちは一つひとつの商品と、一つひとつのお届けに手をかけます。</p>
+        <p>そして、自分たちで通販を続けてきたからこそ分かる「つまずきやすいところ」もあります。その経験を、これから通販・物販を始める方や、伸び悩んでいる方のために役立てたい。陽の光が分けへだてなく降りそそぐように、関わる人みんなの毎日を明るくすることを目指しています。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec biz" id="business" aria-labelledby="bizTitle">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="sec__label">Business</p>
+        <h2 class="sec__title" id="bizTitle">事業内容</h2>
+      </div>
+      <div class="biz__list">
+        <article class="card reveal">
+          <figure>
+            <!-- photo-1595246135406-803418233494（Unsplash） -->
+            <img src="https://images.unsplash.com/photo-1595246135406-803418233494?auto=format&fit=crop&w=1600&q=80" alt="ふたを開けたクラフトの化粧箱と中の商品" loading="lazy" width="800" height="500">
+          </figure>
+          <div class="card__body">
+            <p class="card__no">01</p>
+            <h3>会員制通販事業</h3>
+            <!-- 【確認事項】サービス説明は仮文。取扱商品・会員制度の内容をご記入ください -->
+            <p>会員さまに向けて商品をお届けする、通販事業を運営しています。会員さまとの長いお付き合いを大切に、選ぶ・包む・届けるまでを丁寧に整えています。</p>
+            <ul class="chips" aria-label="主な内容"><li>会員さま向けの販売</li><li>商品の選定</li><li>梱包・お届け</li></ul>
+          </div>
+        </article>
+        <article class="card reveal">
+          <figure>
+            <!-- photo-1460925895917-afdab827c52f（Unsplash） -->
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80" alt="売上の推移を表示したノートパソコンの画面" loading="lazy" width="800" height="500">
+          </figure>
+          <div class="card__body">
+            <p class="card__no">02</p>
+            <h3>通販物販コンサルティング</h3>
+            <!-- 【確認事項】サービス説明は仮文。対応範囲（立ち上げ支援・運用改善など）をご確認ください -->
+            <p>通販・物販に取り組む事業者さまのご相談をお受けしています。自社で通販を続けている立場から、売り方・続け方の悩みを一緒に整理し、次の一手を考えます。</p>
+            <ul class="chips" aria-label="主な内容"><li>現状の整理</li><li>販売の進め方</li><li>運営の見直し</li></ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec values" id="values" aria-labelledby="valTitle">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="sec__label">Values</p>
+        <h2 class="sec__title" id="valTitle">大切にしていること</h2>
+      </div>
+      <!-- 【確認事項】3つの価値観は仮文 -->
+      <ul class="values__list">
+        <li class="value reveal">
+          <span class="value__icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10l10-6 10 6v10l-10 6-10-6z"/><path d="M4 10l10 6 10-6M14 16v10"/></svg></span>
+          <h3>届くまでが、商品。</h3>
+          <p>中身だけでなく、箱を開けたときの印象まで含めて「商品」だと考えています。</p>
+        </li>
+        <li class="value reveal">
+          <span class="value__icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="4"/><circle cx="19" cy="12" r="3"/><path d="M3 23c1-4 4-6 7-6s6 2 7 6M16 22c.6-2.6 2.4-4 4.5-4S24.4 19.4 25 22"/></svg></span>
+          <h3>続くお付き合いを。</h3>
+          <p>一度きりの販売より、また頼みたいと思っていただける関係を大切にします。</p>
+        </li>
+        <li class="value reveal">
+          <span class="value__icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h20M7 18v-5M12 18V8M17 18v-7M22 18V5"/></svg></span>
+          <h3>自分たちで、試す。</h3>
+          <p>ご提案するのは、自分たちの通販で確かめてきた考え方。机上の空論にしません。</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="flow__wrap">
+  <section class="sec flow" id="flow" aria-labelledby="flowTitle">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="sec__label">Flow</p>
+        <h2 class="sec__title" id="flowTitle">コンサルティングの進め方</h2>
+        <!-- 【確認事項】進め方は一般的な流れとして作成した仮案 -->
+        <p class="flow__intro">ご相談の内容に合わせて、進め方は柔軟に調整します。ここでは一例をご紹介します。</p>
+      </div>
+      <ol class="steps">
+        <li class="step reveal"><h3>お話を伺う</h3><p>扱っている商品、売り場、いまのお悩みをお聞きします。</p></li>
+        <li class="step reveal"><h3>現状を整理する</h3><p>売れている所・止まっている所を、一緒に見える形にします。</p></li>
+        <li class="step reveal"><h3>手を決める</h3><p>効き目と手間を比べて、取り組む順番を決めます。</p></li>
+        <li class="step reveal"><h3>振り返る</h3><p>やってみた結果を確かめ、次の一手につなげます。</p></li>
+      </ol>
+    </div>
+  </section>
+  </div>
+
+  <section class="band" aria-label="お届けの風景">
+    <div class="wrap band__in">
+      <figure class="reveal">
+        <!-- photo-1556742049-0cfed4f6a45d（Unsplash） -->
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1600&q=80" alt="お店のカウンターでお客さまと笑顔でやり取りする様子" loading="lazy" width="800" height="500">
+      </figure>
+      <!-- 【確認事項】仮コピー -->
+      <p class="band__note reveal">売る人も、買う人も、<br>気持ちよく続けられる商いを。<small>会員制通販と、通販・物販のご相談。ふたつの仕事は、同じ想いでつながっています。</small></p>
+    </div>
+  </section>
+
+  <section class="sec" id="company" aria-labelledby="coTitle">
+    <div class="wrap co__grid">
+      <div class="reveal">
+        <p class="sec__label">Company</p>
+        <h2 class="sec__title" id="coTitle">概要</h2>
+      </div>
+      <dl class="outline reveal">
+        <div><dt>商号</dt><dd>さんさん</dd></div>
+        <div><dt>事業内容</dt><dd>会員制通販事業<br>通販物販コンサルティング</dd></div>
+        <div><dt>代表者</dt><dd>渡邉 暉太</dd></div>
+        <div><dt>所在地</dt><dd>千葉県木更津市田川</dd></div>
+        <!-- 【確認事項】設立・資本金などはCSVに無いため未掲載 -->
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft__in">
+      <a class="logo" href="#top" aria-label="さんさん トップへ">
+        <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="7" fill="#fff"/><g stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M17 2v4M17 28v4M2 17h4M28 17h4M6.4 6.4l2.8 2.8M24.8 24.8l2.8 2.8M6.4 27.6l2.8-2.8M24.8 9.2l2.8-2.8"/></g></svg>
+        さんさん
+      </a>
+      <nav aria-label="フッターナビゲーション">
+        <ul>
+          <li><a href="#about">私たちについて</a></li>
+          <li><a href="#business">事業内容</a></li>
+          <li><a href="#values">大切にしていること</a></li>
+          <li><a href="#flow">進め方</a></li>
+          <li><a href="#company">会社概要</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="copy">&copy; <span class="yr">2026</span> さんさん</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var hd=document.getElementById('hd'),btn=document.getElementById('menu'),nav=document.getElementById('nav');
+  document.querySelectorAll('.yr').forEach(function(e){e.textContent=new Date().getFullYear();});
+  function onScroll(){hd.classList.toggle('is-scrolled',window.scrollY>20);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  function setMenu(o){btn.setAttribute('aria-expanded',o);btn.setAttribute('aria-label',o?'メニューを閉じる':'メニューを開く');nav.classList.toggle('is-open',o);}
+  btn.addEventListener('click',function(){setMenu(btn.getAttribute('aria-expanded')!=='true');});
+  nav.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
+  var els=document.querySelectorAll('.reveal');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!('IntersectionObserver' in window)||reduce){els.forEach(function(el){el.classList.add('is-in');});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('is-in');io.unobserve(x.target);}});},{rootMargin:'0px 0px -10% 0px'});
+  els.forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
